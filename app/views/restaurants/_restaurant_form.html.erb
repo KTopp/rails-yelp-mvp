@@ -1,0 +1,20 @@
+<%= simple_form_with model: @restaurant, local: true do |f| %>
+  <div>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+
+  <div>
+    <%= f.label :category %>
+    <%= f.select :category, options_for_select(%w[chinese japanese french italian belgian]) %>
+  </div>
+
+  <div>
+    <%= f.submit 'Save' %>
+  </div>
+<% end %>
